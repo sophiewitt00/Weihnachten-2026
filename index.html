@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weihnachten in Freiburg 2026</title>
+<meta name="description" content="Alle Infos zu Weihnachten 2026 in Freiburg-Munzingen: Ablauf, Ausflüge, Essen, Packliste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf5ec; --card:#ffffff; --ink:#1f2a24; --muted:#5f6b64; --line:#eadfcb;
+    --green:#1f4d3a; --green-soft:#e6efe9; --red:#a8322d; --red-soft:#f7e6e4; --gold:#b8862b; --gold-hi:#e8c27a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141a17; --card:#1c2420; --ink:#ece8df; --muted:#a3ada7; --line:#2d3832;
+      --green:#7fc3a0; --green-soft:#1f3229; --red:#e07a72; --red-soft:#3a2321; --gold:#d9ad5a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+  a{color:var(--green)}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2;margin:0 0 .5em}
+  h2{font-size:1.6rem;color:var(--red)}
+  h2::before{content:"✦ ";color:var(--gold);font-size:.8em}
+  .card{border-top:3px solid var(--green)}
+  h3{font-size:1.15rem}
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px}
+
+  /* Hero */
+  header.hero{position:relative;overflow:hidden;text-align:center;color:#fbf3e4;
+    background:radial-gradient(ellipse at top,#2c6b4f 0%,#1a3f2f 55%,#122c21 100%);padding:56px 16px 72px}
+  header.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:28px;background:var(--bg);
+    -webkit-mask:radial-gradient(28px 22px at 50% 0,transparent 98%,#000) 0 0/56px 28px repeat-x;
+            mask:radial-gradient(28px 22px at 50% 0,transparent 98%,#000) 0 0/56px 28px repeat-x}
+  .snow{position:absolute;inset:0;pointer-events:none}
+  .snow i{position:absolute;top:-10px;border-radius:50%;background:#fff;opacity:.8;animation:fall linear infinite}
+  @keyframes fall{to{transform:translate3d(30px,1100px,0)}}
+  @media (prefers-reduced-motion:reduce){.snow{display:none}}
+  .hero-inner{position:relative;max-width:640px;margin:0 auto}
+  .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;color:var(--gold-hi);font-weight:600}
+  .hero h1{font-size:clamp(2.3rem,7vw,3.6rem);margin:.25em 0 .15em;color:#fff}
+  .hero .addr{color:#d9e6dd;margin:0}
+  .ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:22px auto;color:var(--gold-hi)}
+  .ornament::before,.ornament::after{content:"";height:1px;width:70px;background:currentColor;opacity:.6}
+  .invite{background:#fbf3e4;color:#2b231b;border-radius:16px;padding:26px 24px;text-align:left;
+    box-shadow:0 14px 40px rgba(0,0,0,.25);border:1px solid #e8d9b8;position:relative}
+  .invite::before{content:"";position:absolute;inset:7px;border:1px dashed #d4bd8c;border-radius:11px;pointer-events:none}
+  .invite p{margin:0 0 .8em;font-size:1.02rem}
+  .invite .hello{font-family:Fraunces,Georgia,serif;font-size:1.35rem;color:#8e2a26;margin-bottom:.5em}
+  .invite .sign{font-family:Fraunces,Georgia,serif;font-size:1.1rem;color:#1f4d3a;margin:0}
+  .invite .rsvp{display:inline-block;margin-top:14px;background:#a8322d;color:#fff;text-decoration:none;font-weight:600;padding:9px 16px;border-radius:99px;font-size:.92rem}
+
+  nav.toc{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav.toc ul{display:flex;gap:6px;overflow-x:auto;list-style:none;margin:0;padding:10px 16px;max-width:860px;margin:0 auto;scrollbar-width:none}
+  nav.toc a{display:block;white-space:nowrap;padding:6px 12px;border-radius:99px;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:500}
+  nav.toc a:hover{background:var(--green-soft)}
+
+  section{padding:40px 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 0 16px}
+  .muted{color:var(--muted)}
+  .small{font-size:.88rem}
+  .pill{display:inline-block;font-size:.75rem;font-weight:600;padding:2px 9px;border-radius:99px;background:var(--green-soft);color:var(--green);vertical-align:middle}
+  .pill.todo{background:var(--red-soft);color:var(--red)}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .grid .card{margin:0}
+  ul.clean{margin:.3em 0 0;padding-left:1.1em}
+  ul.clean li{margin:.2em 0}
+
+  /* Ablauf */
+  .day{display:grid;grid-template-columns:92px 1fr;gap:16px;border-top:1px solid var(--line);padding:20px 0}
+  .day:first-of-type{border-top:0}
+  .date{font-family:Fraunces,Georgia,serif}
+  .date b{display:block;font-size:1.9rem;color:var(--red);line-height:1}
+  .date span{font-size:.85rem;color:var(--muted)}
+  .slot{margin:0 0 14px}
+  .slot:last-child{margin-bottom:0}
+  .slot .when{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600}
+  .options{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:8px}
+  .opt{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)}
+  .opt h4{margin:0 0 4px;font-size:1rem}
+  @media (max-width:520px){ .day{grid-template-columns:1fr;gap:6px} .date b{display:inline;font-size:1.5rem;margin-right:8px} }
+
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+  .tablewrap{overflow-x:auto}
+
+  /* Formular */
+  form{display:grid;gap:12px}
+  label{font-weight:500;font-size:.92rem}
+  input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:4px}
+  textarea{min-height:90px;resize:vertical}
+  .row2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+  @media (max-width:520px){.row2{grid-template-columns:1fr}}
+  .btns{display:flex;flex-wrap:wrap;gap:8px}
+  button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;background:var(--green);color:#fff}
+  button.ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+  @media (prefers-color-scheme: dark){ button{color:#10201a} }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .chip{border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:6px 12px;font-size:.92rem}
+  .placeholder{border:2px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--muted)}
+
+  /* Packliste */
+  .check{list-style:none;padding:0;margin:0}
+  .check li{display:flex;gap:10px;align-items:flex-start;padding:6px 0}
+  .check input{width:18px;height:18px;margin:3px 0 0;flex:none;accent-color:var(--green)}
+  .check input:checked + span{color:var(--muted);text-decoration:line-through}
+
+
+  /* Entscheidungen & Plan */
+  .decide{background:var(--red-soft);border:1px solid color-mix(in srgb,var(--red) 35%,transparent);border-top:3px solid var(--red);border-radius:14px;padding:20px;margin:0 0 16px}
+  .decide h3{color:var(--red);margin-bottom:.6em}
+  .decide ol{margin:0;padding-left:1.2em}
+  .decide li{margin:.45em 0}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:99px;vertical-align:middle;white-space:nowrap}
+  .tag.ticket{background:var(--red);color:#fff}
+  .tag.now{background:var(--gold);color:#fff}
+  .tag.later{background:var(--line);color:var(--muted)}
+  .plan{width:100%}
+  .plan td:first-child{white-space:nowrap;font-weight:600;color:var(--red);width:1%}
+  .plan td:nth-child(2){white-space:nowrap;color:var(--muted);width:1%}
+  @media (max-width:520px){
+    .plan tr{display:grid;grid-template-columns:62px 1fr;column-gap:8px;border-bottom:1px solid var(--line);padding:6px 0}
+    .plan td{border:0;padding:1px 0}
+    .plan td:first-child{grid-row:1/3}
+    .plan td:nth-child(2){font-size:.78rem}
+  }
+  .proposal{border-left:3px solid var(--green);padding:2px 0 2px 12px;margin:6px 0 10px}
+  .proposal .lbl,.more .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+  .proposal .lbl{color:var(--green)}
+  .more{margin-top:10px}
+  .more .lbl{color:var(--muted);display:block;margin-bottom:6px}
+  .group{font-weight:600;margin:12px 0 4px}
+
+  footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="snow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Einladung · 23. – 26. Dezember 2026</div>
+    <h1>Weihnachten in Freiburg</h1>
+    <p class="addr">Am Ringgässle 2c · 79112 Freiburg-Munzingen</p>
+    <div class="ornament" aria-hidden="true">🎄</div>
+    <div class="invite">
+      <p class="hello">Ihr Lieben,</p>
+      <p>dieses Jahr feiern wir Weihnachten zusammen in Munzingen – und wir freuen uns riesig auf euch! Es gibt Plätzchen, Kerzenlicht, eine Winterwanderung im Schwarzwald, viel zu viel gutes Essen und natürlich einen Spieleabend, bei dem keiner verlieren will.</p>
+      <p>Bringt warme Socken, gute Laune und euren Hunger mit – um den Rest kümmern wir uns.</p>
+      <p class="sign">Von Herzen,<br>Conny, Ralph, Sophie &amp; Penny 🐾</p>
+      <a class="rsvp" href="#essen">Essenswunsch abgeben ✨</a>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Inhalt">
+  <ul>
+    <li><a href="#wer">Wer kommt</a></li>
+    <li><a href="#ablauf">Ablauf</a></li>
+    <li><a href="#zimmer">Zimmer</a></li>
+    <li><a href="#essen">Essen</a></li>
+    <li><a href="#packliste">Packliste</a></li>
+    <li><a href="#anfahrt">Anfahrt</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <!-- WER -->
+  <section id="wer">
+    <h2>Wer kommt</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Gastgeber · Munzingen</h3>
+        <ul class="clean"><li>Conny</li><li>Ralph</li><li>Sophie</li><li>Penny 🐈</li></ul>
+      </div>
+      <div class="card">
+        <h3>Aus Hamburg</h3>
+        <ul class="clean"><li>Katrin</li><li>Marcus</li><li>Max</li><li>Ella</li></ul>
+        <p class="small muted">Ankunft: Mi, 23.12. abends<br>Abreise: So, 27.12. nach Serfaus</p>
+      </div>
+      <div class="card">
+        <h3>Aus Düsseldorf</h3>
+        <ul class="clean"><li>Edith</li><li>Barbara</li><li>Levi, der Dackel 🐶</li></ul>
+        <p class="small muted">Ankunft: <span class="pill todo">noch offen</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section id="ablauf">
+    <h2>Ablaufplan</h2>
+
+    <div class="decide">
+      <h3>⏰ Bitte jetzt entscheiden &amp; buchen</h3>
+      <ol>
+        <li><strong>26.12. – Rulantica ja oder nein?</strong> <span class="tag ticket">🎟 Tickets jetzt</span><br>
+          <span class="small">Vorschlag für Max, Ella &amp; Sophie. Wer kommt mit? Online vorbuchen, die Tageskasse gibt es nur nach Verfügbarkeit und mit Aufschlag. → <a href="https://www.europapark.de/de/rulantica/preise-oeffnungszeiten" target="_blank" rel="noopener">Tickets</a></span></li>
+        <li><strong>26.12. abends – Jazzhaus: „Refrigerators“ (Ska), 20:00 Uhr</strong> <span class="tag ticket">🎟 Tickets jetzt</span><br>
+          <span class="small">VVK 24,10 € inkl. Gebühren, Abendkasse 27 €, Stehplatz. → <a href="https://jazzhaus.reservix.de/p/reservix/event/2597022" target="_blank" rel="noopener">Tickets</a></span></li>
+        <li><strong>25.12. nachmittags – Circolo Weihnachtszirkus, 15:00 Uhr</strong> <span class="tag ticket">🎟 Tickets jetzt</span><br>
+          <span class="small">Tickets 29–57 €. → <a href="https://bzticket.reservix.de/p/reservix/event/2523243" target="_blank" rel="noopener">Tickets</a></span></li>
+        <li><strong>25.12. abends – Spieleabend oder Essen im Augustiner?</strong> <span class="tag now">Entscheiden</span><br>
+          <span class="small">Falls Augustiner: Tisch für 10 reservieren.</span></li>
+        <li><strong>26.12. – Programm für die Erwachsenen</strong> <span class="tag now">Entscheiden</span><br>
+          <span class="small">Aus den Optionen weiter unten auswählen.</span></li>
+      </ol>
+      <p class="small muted" style="margin:10px 0 0"><span class="tag later">Später</span> Kirche am 24.12. — die Termine kommen 2–4 Wochen vorher.</p>
+    </div>
+
+    <div class="card tablewrap">
+      <h3>Auf einen Blick</h3>
+      <table class="plan small">
+        <tr><td>Mi 23.</td><td>abends</td><td>Ankunft der Hamburger</td></tr>
+        <tr><td>Do 24.</td><td>morgens</td><td>Winterwanderung im Schwarzwald</td></tr>
+        <tr><td></td><td>nachm./abends</td><td>Kirche: Kinderchristmette Munzingen, Münster oder späte Messe Munzingen <span class="tag later">folgt</span></td></tr>
+        <tr><td></td><td>abends</td><td>Bescherung 🎁</td></tr>
+        <tr><td>Fr 25.</td><td>morgens</td><td>Runde über den Tuniberg</td></tr>
+        <tr><td></td><td>~13:00</td><td>Weihnachtsessen</td></tr>
+        <tr><td></td><td>15:00</td><td>Circolo Weihnachtszirkus <span class="tag ticket">🎟</span></td></tr>
+        <tr><td></td><td>abends</td><td>Spieleabend 🎲 oder Essen im Augustiner</td></tr>
+        <tr><td>Sa 26.</td><td>tagsüber</td><td>Jüngere: Rulantica <span class="tag ticket">🎟</span> · Erwachsene: eigenes Programm</td></tr>
+        <tr><td></td><td>abends</td><td>Essen gehen und/oder Jazzhaus <span class="tag ticket">🎟</span></td></tr>
+        <tr><td>So 27.</td><td>vormittags</td><td>Abreise: Hamburger nach Serfaus, Conny &amp; Ralph fahren auch – Haus aufräumen 🧹</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+
+      <div class="day">
+        <div class="date"><b>23.</b><span>Mittwoch</span></div>
+        <div>
+          <div class="slot"><div class="when">Abends</div>
+            Ankunft der Hamburger. Gemütliches Ankommen, etwas Einfaches essen.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="date"><b>24.</b><span>Donnerstag · Heiligabend</span></div>
+        <div>
+          <div class="slot"><div class="when">Vormittag</div>
+            <h3>Winterwanderung im Schwarzwald</h3>
+            <div class="proposal"><span class="lbl">Beispiel</span>
+              <p style="margin:2px 0 0"><strong>Todtnauberg, Martin-Heidegger-Rundweg</strong>: 6,2 km, ca. 2,5 Std. Start und Ziel ist der Wanderparkplatz Radschert (1.156 m). Unterwegs kommt man am Jakobus-Kreuz mit Riesenstuhl und Buch-Bank, am Skihang und an der Fatima-Kapelle vorbei. Gut ausgeschildert und wintertauglich. Einkehr im Berggasthof Stübenwasen oder im Café im Glöcklehof (Rütte). An Heiligabend vorher prüfen, ob offen ist. · <a href="https://jungwandern.de/todtnauberg-wandern/" target="_blank" rel="noopener">Tour</a></p>
+            </div>
+            <div class="more"><span class="lbl">Alternativen</span>
+              <ul class="clean small">
+                <li><strong>Schauinsland-Rundweg</strong>: näher an Freiburg, mit der Schauinslandbahn hoch, oben Gipfelrunde mit Aussicht · <a href="https://jungwandern.de/schauinsland-wandern/" target="_blank" rel="noopener">Tour</a></li>
+                <li><strong>Rund um den Feldberg</strong>: sieben Winterwanderwege, schneesicherer · <a href="https://jungwandern.de/feldberg-winterwandern/" target="_blank" rel="noopener">Übersicht</a></li>
+                <li><strong>Weitere Winterwanderwege im Schwarzwald</strong> · <a href="https://jungwandern.de/schwarzwald-winterwandern/" target="_blank" rel="noopener">9 Touren</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="slot"><div class="when">Nachmittag / Abend</div>
+            <h3>Kirche <span class="tag later">Infos 2–4 Wochen vorher</span></h3>
+            <div class="options">
+              <div class="opt"><h4>Kinderchristmette Munzingen</h4>
+                <p class="small" style="margin:0">Am Nachmittag, zu Fuß erreichbar, entspannt mit Oma. Danach ist genug Zeit für die Bescherung.</p></div>
+              <div class="opt"><h4>Freiburger Münster</h4>
+                <p class="small" style="margin:0">In den Vorjahren gab es um 22:00 Uhr die Pontifikal-Christmette mit Erzbischof, Domsingknaben und Münsterorchester, ab 21:30 Uhr vorher „Musik vor der Christmette“. Sehr voll, also früh da sein. Keine großen Taschen oder Rucksäcke mitnehmen.</p>
+                <p class="small muted" style="margin:6px 0 0"><a href="https://kkfr.de/gottesdienste/gottesdienste-im-freiburger-muenster/" target="_blank" rel="noopener">Gottesdienste</a> · <a href="https://www.ebfr.de/livestream" target="_blank" rel="noopener">Livestream</a></p></div>
+              <div class="opt"><h4>Späte Messe Munzingen</h4>
+                <p class="small" style="margin:0">Nach der Bescherung, ganz ohne Fahrerei.</p>
+                <p class="small muted" style="margin:6px 0 0"><a href="http://www.kath-tuniberg.de" target="_blank" rel="noopener">Gottesdienste Tuniberg</a></p></div>
+            </div>
+          </div>
+          <div class="slot"><div class="when">Abend</div>
+            <h3>Bescherung 🎁</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="date"><b>25.</b><span>Freitag · 1. Feiertag</span></div>
+        <div>
+          <div class="proposal"><span class="lbl">Unser Vorschlag</span>
+            <ul class="clean" style="margin-top:4px">
+              <li><strong>Morgens:</strong> frische Luft bei einer kurzen Runde durch die Reben über den Tuniberg, direkt vor der Haustür 🍇</li>
+              <li><strong>Ca. 13:00 Uhr:</strong> Weihnachtsessen zu Hause</li>
+              <li><strong>15:00 Uhr:</strong> Circolo, Freiburgs Weihnachts-Circus auf dem Neuen Messplatz (Messe Freiburg). Tickets 29–57 €. Eine weitere Vorstellung gibt es um 19:00 Uhr. <span class="tag ticket">🎟 Tickets jetzt</span></li>
+            </ul>
+          </div>
+          <div class="slot"><div class="when">Abends – eins von beiden</div>
+            <div class="options">
+              <div class="opt"><h4>🎲 Großer Spieleabend</h4>
+                <p class="small" style="margin:0">Teams quer durch die Familie, Snacks und Punsch auf dem Tisch. Jeder bringt sein Lieblingsspiel mit (Kartenspiele, Activity, Wizard, Quiz …). Wer gewinnt, sucht am 26. das Restaurant aus. 🏆</p></div>
+              <div class="opt"><h4>🍽 Essen im Augustiner</h4>
+                <p class="small" style="margin:0">Hat am 1. Feiertag geöffnet. Bei 10 Personen rechtzeitig reservieren. <span class="tag now">Reservieren</span></p></div>
+            </div>
+          </div>
+          <div class="more"><span class="lbl">Weitere Optionen statt Zirkus</span>
+            <div class="options" style="margin-top:0">
+              <div class="opt"><h4>🏰 Schlossberg-Spaziergang</h4>
+                <p class="small" style="margin:0">Durch die Altstadt hinauf auf den Freiburger Hausberg, oben schöner Blick aufs Münster. Wer mag, steigt noch auf den Aussichtsturm. Gutes Tempo auch für Oma und Levi.</p></div>
+              <div class="opt"><h4>🚡 Schauinslandbahn</h4>
+                <p class="small" style="margin:0">20 Minuten Seilbahnfahrt auf 1.284 m, oben ein flacher Gipfelrundweg. Bei klarer Sicht reicht der Blick bis zu den Vogesen und den Alpen. Barrierefrei. Im Dezember täglich 9–17 Uhr, ob das auch am Feiertag gilt, bitte prüfen.</p></div>
+              <div class="opt"><h4>🎾 Squash oder Tennis</h4>
+                <p class="small" style="margin:0">Der Sportpark Freiburg (Ensisheimer Str. 5) hat Squash und Tennis, Squash gibt es auch an der Hans-Bunte-Str. 10a. Ob an den Feiertagen geöffnet ist, vorher anrufen und einen Court reservieren.</p></div>
+              <div class="opt"><h4>🎳 Bowlingpark Freiburg</h4>
+                <p class="small" style="margin:0">In Betzenhausen (Westside), dazu Billard und Darts. Sonn- und feiertags regulär 10–22 Uhr, an und vor Feiertagen können die Zeiten abweichen. Ob am 25./26. offen ist, bitte per Mail an info@bowlingpark-freiburg.de klären. <span class="tag now">Öffnung prüfen</span></p>
+                <p class="small muted" style="margin:6px 0 0">Bahn pro Stunde am Feiertag 41 €, mit Kind bis 16 Jahre 37 €. Schuhe 2,50 €. Reservierung nur online. · <a href="https://www.bowlingpark-freiburg.de/" target="_blank" rel="noopener">Website &amp; Reservierung</a></p></div>
+              <div class="opt"><h4>🏊 Hallenbad Haslach</h4>
+                <p class="small" style="margin:0">Hatte 2025 am 25. und 26.12. von 9 bis 17 Uhr geöffnet. Der Plan für 2026 erscheint im Dezember.</p></div>
+              <div class="opt"><h4>🎬 Kino</h4>
+                <p class="small" style="margin:0">Ins Feiertagsprogramm der Freiburger Kinos schauen.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="date"><b>26.</b><span>Samstag · 2. Feiertag</span></div>
+        <div>
+          <p class="group">👟 Für die Jüngeren: Max, Ella &amp; Sophie</p>
+          <div class="options" style="margin-top:0">
+            <div class="opt"><h4>Rulantica <span class="pill">Rust</span> <span class="tag ticket">🎟 Jetzt entscheiden</span></h4>
+              <p class="small" style="margin:0 0 6px">Die Wasserwelt des Europa-Parks, etwa 45 Minuten Fahrt. Geöffnet 9:30–22:00 Uhr.</p>
+              <table class="small">
+                <tr><td>Tagesticket</td><td>38 – 54 €</td></tr>
+                <tr><td>Abendticket (17–22 Uhr)</td><td>35 – 46,50 €</td></tr>
+                <tr><td>Moonlight (19–22 Uhr)</td><td>28 – 34 €</td></tr>
+                <tr><td>Parken</td><td>10 €</td></tr>
+              </table>
+              <p class="small muted" style="margin:6px 0 0">Tickets gelten für ein festes Datum, der Preis hängt vom Tag ab. Senioren ab 60 und Kinder 4–11 zahlen weniger. Unbedingt online vorbuchen, die Tageskasse gibt es nur nach Verfügbarkeit und mit Aufschlag. Achtung bei der Rückfahrt, damit es abends noch ins Jazzhaus reicht. → <a href="https://www.europapark.de/de/rulantica/preise-oeffnungszeiten" target="_blank" rel="noopener">Tickets buchen</a></p>
+            </div>
+            <div class="opt"><h4>Oder etwas vom 25.</h4>
+              <p class="small" style="margin:0">Squash oder Tennis, Bowling, Schauinslandbahn, Hallenbad, Schlossberg, Kino. Alles steht bei den Optionen für den 25.</p></div>
+          </div>
+
+          <p class="group">☕ Für die Erwachsenen <span class="tag now">Entscheiden</span></p>
+          <div class="options" style="margin-top:0">
+            <div class="opt"><h4>Vita Classica <span class="pill">Bad Krozingen</span></h4>
+              <p class="small" style="margin:0 0 6px">Thermalbad mit Innen- und Außenbecken und Saunaparadies, nur etwa 20 Minuten von Munzingen.</p>
+              <table class="small">
+                <tr><td>26.12. Thermalbad</td><td>8:30 – 22:00</td></tr>
+                <tr><td>Saunaparadies</td><td>ab 10:00</td></tr>
+                <tr><td>Letzter Einlass</td><td>20:15</td></tr>
+                <tr><td>Parken</td><td>gratis (Parkscheibe)</td></tr>
+              </table>
+              <p class="small muted" style="margin:6px 0 0">Samstags ist Familientag in der Sauna. Keine Vorbuchung nötig. → <a href="https://www.bad-krozingen.info/Vita-Classica" target="_blank" rel="noopener">Infos</a></p></div>
+            <div class="opt"><h4>Theater im Marienbad <span class="pill">16:00 Uhr</span></h4>
+              <p class="small" style="margin:0">Theater für junges Publikum in der Wiehre. Das Dezember-Programm ist noch nicht veröffentlicht. <span class="tag later">Stück folgt</span></p>
+              <p class="small muted" style="margin:6px 0 0">Karten: karten@marienbad.org · 0761 31470 (Di &amp; Do 14–17 Uhr) · <a href="https://www.marienbad.org/spielplan" target="_blank" rel="noopener">Spielplan</a></p></div>
+            <div class="opt"><h4>Circolo <span class="pill">15:00</span></h4>
+              <p class="small" style="margin:0">Falls es am 25. nicht klappt: am 26. gibt es ebenfalls Vorstellungen um 15:00 und 19:00 Uhr. → <a href="https://bzticket.reservix.de/p/reservix/event/2523243" target="_blank" rel="noopener">Tickets</a></p></div>
+            <div class="opt"><h4>Schlossberg · Schauinsland · Altstadt</h4>
+              <p class="small" style="margin:0">Ruhige Ausflüge in der Nähe, alles beim 25. beschrieben.</p></div>
+          </div>
+
+          <div class="slot" style="margin-top:16px"><div class="when">Abends – alle zusammen</div>
+            <div class="options">
+              <div class="opt"><h4>🍽 Erst essen gehen …</h4>
+                <p class="small" style="margin:0">Restaurant in der Stadt reservieren, gern in Laufweite zum Jazzhaus. <span class="tag now">Reservieren</span></p></div>
+              <div class="opt"><h4>🎷 … dann ins Jazzhaus <span class="tag ticket">🎟 Tickets jetzt</span></h4>
+                <p class="small" style="margin:0">Um 20:00 Uhr spielen die Refrigerators (Ska). Vorverkauf 24,10 € inkl. Gebühren, Abendkasse 27 €, nur Stehplätze. Danach ab 23 Uhr „I Love 80s“-Party, Abendkasse 10 €.</p>
+                <p class="small muted" style="margin:6px 0 0">→ <a href="https://jazzhaus.reservix.de/p/reservix/event/2597022" target="_blank" rel="noopener">Tickets kaufen</a></p></div>
+            </div>
+            <p class="small muted" style="margin:8px 0 0">Oder nur eins von beiden, ganz wie ihr mögt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="date"><b>27.</b><span>Sonntag · Abreise</span></div>
+        <div>
+          <ul class="clean" style="margin-top:0">
+            <li>Die Hamburger fahren weiter nach <strong>Serfaus</strong> ⛷</li>
+            <li>Conny &amp; Ralph fahren ebenfalls ab</li>
+            <li>Abreise der Düsseldorfer <span class="pill todo">noch offen</span></li>
+            <li><strong>Gemeinsam aufräumen:</strong> Betten abziehen, Küche, Müll, Kühlschrank leeren. Danach ist das Haus leer 🧹</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ZIMMER -->
+  <section id="zimmer">
+    <h2>Wer schläft wo <span class="pill todo">wird noch geplant</span></h2>
+    <div class="card tablewrap">
+      <table>
+        <thead><tr><th>Zimmer</th><th>Wer</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td>…</td><td>Katrin &amp; Marcus</td><td class="muted">tbd</td></tr>
+          <tr><td>…</td><td>Max</td><td class="muted">tbd</td></tr>
+          <tr><td>…</td><td>Ella</td><td class="muted">tbd</td></tr>
+          <tr><td>…</td><td>Edith</td><td class="muted">tbd</td></tr>
+          <tr><td>…</td><td>Barbara</td><td class="muted">tbd</td></tr>
+          <tr><td>überall</td><td>Penny</td><td class="muted">Tür zu, wenn ihr Ruhe wollt 😉</td></tr>
+          <tr><td>…</td><td>Levi</td><td class="muted">tbd — Penny &amp; Levi langsam bekannt machen 🐾</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ESSEN -->
+  <section id="essen">
+    <h2>Essen</h2>
+
+    <div class="card">
+      <h3>Ideen bisher</h3>
+      <div class="chips">
+        <span class="chip">🧀 Raclette</span>
+        <span class="chip">🌱 Vegane Lammkeule</span>
+        <span class="chip">🍲 Gulasch</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Deine Idee einreichen</h3>
+      <p class="small muted" style="margin-top:0">Wunschgericht, Allergien oder „ich bringe Nachtisch mit“ — einfach eintragen und abschicken.</p>
+      <form id="dinnerForm">
+        <div class="row2">
+          <label>Name
+            <input name="name" required placeholder="z. B. Ella">
+          </label>
+          <label>Für welchen Abend?
+            <select name="abend">
+              <option>egal</option>
+              <option>23.12. (Ankunft)</option>
+              <option>24.12. (Heiligabend)</option>
+              <option>25.12. (1. Feiertag)</option>
+              <option>26.12. (2. Feiertag)</option>
+            </select>
+          </label>
+        </div>
+        <label>Idee / Wunsch
+          <textarea name="idee" required placeholder="z. B. Rotkohl als Beilage, ich mache Tiramisu …"></textarea>
+        </label>
+        <div class="btns">
+          <button type="submit" data-via="whatsapp">Per WhatsApp senden</button>
+          <button type="submit" class="ghost" data-via="mail">Per E-Mail senden</button>
+        </div>
+        <p id="formNote" class="small muted" style="margin:0" role="status"></p>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>Menüplan</h3>
+      <!-- Hier später den Menüplan eintragen, z. B.:
+           <table><tr><td>24.12.</td><td>Raclette</td><td>Einkauf: Ralph</td></tr></table> -->
+      <div class="placeholder">Kommt bald — hier steht dann, was es wann gibt und wer was mitbringt.</div>
+    </div>
+  </section>
+
+  <!-- PACKLISTE -->
+  <section id="packliste">
+    <h2>Packliste</h2>
+    <p class="small muted" style="margin-top:-.3em">Häkchen werden auf deinem Gerät gespeichert.</p>
+    <div class="grid">
+      <div class="card"><h3>🥾 Wanderung</h3><ul class="check">
+        <li><input type="checkbox" id="p1"><span>Wanderschuhe, wasserdicht</span></li>
+        <li><input type="checkbox" id="p2"><span>Warme Jacke, Mütze, Handschuhe</span></li>
+        <li><input type="checkbox" id="p3"><span>Funktions- oder Wollsocken</span></li>
+        <li><input type="checkbox" id="p4"><span>Grödel / Spikes, falls Schnee liegt</span></li>
+        <li><input type="checkbox" id="p5"><span>Kleiner Rucksack, Thermoskanne</span></li>
+      </ul></div>
+      <div class="card"><h3>🌊 Bad &amp; Therme</h3><ul class="check">
+        <li><input type="checkbox" id="p6"><span>Badesachen</span></li>
+        <li><input type="checkbox" id="p7"><span>Handtuch &amp; Bademantel</span></li>
+        <li><input type="checkbox" id="p8"><span>Badeschlappen</span></li>
+        <li><input type="checkbox" id="p9"><span>Haargummi, Duschzeug</span></li>
+      </ul></div>
+      <div class="card"><h3>🎄 Fest</h3><ul class="check">
+        <li><input type="checkbox" id="p10"><span>Geschenke (gut verpackt im Koffer)</span></li>
+        <li><input type="checkbox" id="p11"><span>Schickes Outfit für Messe &amp; Heiligabend</span></li>
+        <li><input type="checkbox" id="p12"><span>Squash-/Tennisschläger, Hallenschuhe &amp; Sportsachen</span></li>
+        <li><input type="checkbox" id="p13"><span>Lieblingsspiel für den Spieleabend</span></li>
+      </ul></div>
+      <div class="card"><h3>🧳 Allgemein</h3><ul class="check">
+        <li><input type="checkbox" id="p14"><span>Hausschuhe</span></li>
+        <li><input type="checkbox" id="p15"><span>Ladekabel &amp; Powerbank</span></li>
+        <li><input type="checkbox" id="p16"><span>Medikamente</span></li>
+        <li><input type="checkbox" id="p17"><span>Ausweis, Bank-/EC-Karte</span></li>
+        <li><input type="checkbox" id="p18"><span>Leckerli für Penny 🐟</span></li>
+        <li><input type="checkbox" id="p19"><span>Für Levi: Leine, Napf, Futter, Körbchen, Kotbeutel 🐶</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- ANFAHRT -->
+  <section id="anfahrt">
+    <h2>Anfahrt</h2>
+    <div class="card">
+      <p style="margin-top:0"><strong>Am Ringgässle 2c, 79112 Freiburg-Munzingen</strong></p>
+      <p class="small muted">Munzingen liegt im Südwesten von Freiburg am Tuniberg, Autobahnausfahrt A5 Freiburg-Süd.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Am+Ringg%C3%A4ssle+2c+79112+Freiburg" target="_blank" rel="noopener">In Google Maps öffnen →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>Frohe Weihnachten! 🎄 · Stand: 18.10.2026 · Uhrzeiten und Preise ohne Gewähr — kurz vorher nochmal prüfen.</footer>
+
+<script>
+  // Schneeflocken
+  const snow = document.querySelector('.snow');
+  for (let i = 0; i < 40; i++) {
+    const f = document.createElement('i');
+    const s = 2 + Math.random() * 4;
+    f.style.cssText = `left:${Math.random()*100}%;width:${s}px;height:${s}px;opacity:${.4+Math.random()*.5};animation-duration:${8+Math.random()*10}s;animation-delay:${-Math.random()*18}s`;
+    snow.appendChild(f);
+  }
+
+  // Packliste: Häkchen lokal merken
+  document.querySelectorAll('.check input').forEach(cb => {
+    try { cb.checked = localStorage.getItem('pack-' + cb.id) === '1'; } catch (e) {}
+    cb.addEventListener('change', () => {
+      try { localStorage.setItem('pack-' + cb.id, cb.checked ? '1' : '0'); } catch (e) {}
+    });
+  });
+
+  // Essensideen: als WhatsApp-Nachricht oder E-Mail versenden
+  const form = document.getElementById('dinnerForm');
+  let via = 'whatsapp';
+  form.querySelectorAll('button[type=submit]').forEach(b => b.addEventListener('click', () => via = b.dataset.via));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const text = `🎄 Essensidee für Weihnachten\nVon: ${d.get('name')}\nAbend: ${d.get('abend')}\nIdee: ${d.get('idee')}`;
+    const url = via === 'mail'
+      ? 'mailto:?subject=' + encodeURIComponent('Essensidee Weihnachten') + '&body=' + encodeURIComponent(text)
+      : 'https://wa.me/?text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+    document.getElementById('formNote').textContent = 'Danke! Nachricht ist vorbereitet – jetzt nur noch an Sophie schicken.';
+    form.reset();
+  });
+</script>
+</body>
+</html>
